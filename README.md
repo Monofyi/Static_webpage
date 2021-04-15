@@ -1,1 +1,1 @@
-# Site
+# Static Site
