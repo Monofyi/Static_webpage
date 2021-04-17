@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bitecope</title>    
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/timeline.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    </head>
+
+    <body>
+          <div class="container-fluid w-100">
+            <div class="loader">
+              <img src="img/loading.gif" style="width: 220px; height: 220px; position: fixed; top: 50%; left: 40%;">
+            </div>
+            
+          <div class="row-first">
+              <!-- navbar starts -->
+              <nav class="navbar fixed-top navbar-expand-lg bg-blue navbar-dark">
+                <a class="navbar-brand" href="#"><img src="img/Bitecope_dark.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#Home">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#About">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#Contact">Contact Us</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                        T&C
+                      </a>                      
+                    </li>
+                    <!-- <li class="nav-item">
+                      <a class="nav-link" href="#Developers">Our Team</a>
+                    </li> -->
+                   
+                  </ul>
+               
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header" style="background-color:  #8ce0fa;">
+                          <h5 class="modal-title" id="exampleModalLongTitle">
+                          TERMS & CONDITIONS</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <%- include('TandC'); -%>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!--collapse ends -->
+              </nav>
+              <!-- navbar ends -->
+          </div>
+          
+          <!-- first row starts -->
+          <div class="row bg-home"  id="Home">
+            <div class="col-md-8 col-sm-8">
+              <p class="wow flash 5s welcome-text">Welcome to Bitecope!</p>
+              <h1 class="wow flash 5s welcome-desc">Manage supply-chain effectively | Realtime updation | Completely online | Scalable | Sustainable</h1>  
+            </div>
+            <img class="col-md-4 col-sm-4 illustration_svg ml-auto" src="img/img3.png">  
+          </div>
+          <!--first row ends-->
+
+          <!-- second row starts -->
+          <div class="row bg-casual">
+            <p class="wow fadeInLeft title-text offset-sm-2">Supply Chain the Bitecope Way!</p>
+            <div class="main-timeline mx-auto offset-sm-2 mt-4">
+             <!-- start section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                  <div class="circle-content">
+                    <div class="wow rollIn circle-outer">
+                        <span class="circle">
+                        <span class="step">Step 1</span>
+                        </span>
+                    </div>
+                  </div>
+                  <div class="timeline-content p-4">
+                    <p class="title">Market strategy</p>                                       
+                    <p class="description">
+                      The supply chain manager tries to minimize shortages and keep costs down. The job is not only about logistics and purchasing inventory but also improve productivity, quality, and efficiency of operations.
+                    </p>
+                  </div>
+              </div>
+              <!-- end section-->
+
+              <!-- start section-->
+              <div class="timeline">
+                <div class="icon"></div>
+                  <div class="circle-content">
+                    <div class="wow rollIn circle-outer">
+                      <span class="circle">
+                      <span class="step">Step 2</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="timeline-content p-4">
+                    <p class="title">Real-time status</p>                                            
+                    <p class="description">
+                      Manufacturer can co-ordinate with the distributors and produce required amount of products based on the real-time demand.
+                    </p>
+                  </div>
+                </div>
+                <!-- end section-->
+            
+                <!-- start section-->
+                  <div class="timeline">
+                    <div class="icon"></div>
+                      <div class="circle-content">
+                          <div class="wow rollIn circle-outer">
+                            <span class="circle">
+                            <span class="step">Step 3</span>
+                            </span>
+                          </div>
+                      </div>
+                      <div class="timeline-content p-4">
+                        <p class="title">Distribution</p>
+                        <p class="description">
+                          The distributor can make early decision about the stocks based on the re-order level if he gets to see real-time data updates about products.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- end section-->
+            
+                    <!-- start section-->
+                      <div class="timeline">
+                        <div class="icon"></div>
+                          <div class="circle-content">
+                            <div class="wow rollIn circle-outer">
+                              <span class="circle">
+                              <span class="step">Step 4</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="timeline-content p-4">
+                            <p class="title">Realtime tracking</p>
+                            <p class="description">
+                              The retailer can keep track of goods delivered, not delivered, excess as well as expired goods making warehouse management easier!
+                            </p>
+                          </div>
+                        </div>
+                        <!-- end section-->
+
+                        <!-- start section-->
+                          <div class="timeline">
+                            <div class="icon"></div>
+                              <div class="circle-content">
+                                <div class="wow rollIn circle-outer">
+                                  <span class="circle">
+                                    <span class="step">Step 5</span>
+                                  </span>
+                                </div>
+                              </div>
+                            <div class="timeline-content p-4">
+                              <p class="title">Return system</p>
+                              <p class="description">
+                                Retailer can return excess goods or goods that are not sold to the distributor. Those good can be redirected to the required warehouse location.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- end section-->
+                      </div>
+                     <!-- main timeline ends-->
+              </div>
+              <!-- second row ends -->
+
+              <!-- third row starts -->
+              <div class="row bg-blue" id="About">
+                <div class="perks col-sm-7 ml-auto">
+                  <p class="wow fadeInRight title-text">About Us</p>
+                  <p class="text">Bitecope is one of a kind company which designs tools to be used by manufacturer, distributor as well as the retailer making the whole process hassle-free, co-ordinated and online. We provide multi-channel accessibility through mobile app and website.<br><br> The perks of using Bitecope includes: </p>
+                  <p class="wow bounceInLeft text">🎯 Access to fully co-ordinated inventory management website containing real-time data.</p>
+                  <p class="wow bounceInLeft text">🎯 Access to mobile application for ordering the products in real-time.</p>
+                  <p class="wow bounceInLeft text">🎯 Quicker and accurate decision making - from buying, to production and consumption.</p>
+                  <p class="wow bounceInLeft text">🎯 Less Wastage of products.</p>
+                  <p class="wow bounceInLeft text">🎯 Effective cost cutting and hence more profits.</p>
+                  <p class="wow bounceInLeft text">🎯 Effective tracking of all products - expired, excess, shortage, sold etc.</p>
+                  <p class="wow bounceInLeft text pb-5">🎯 No delay in the whole process whatsoever.</p>
+                </div>
+                <img src="img/Shipping.png" class="col-sm-5 mr-auto perks_svg">
+              </div>
+              <!-- third row ends -->
+    
+          
+
+          <!-- fourth row starts -->
+          <div class="row" id="Contact">
+            <div class="card col-sm-8 offset-sm-2 mt-4 mb-4">
+              <p class="wow fadeInLeft title-text">Contact us</p>
+              <p class="text">If you wish to know more or purchase our products, please leave your details here. Our team will assist you further.</p>
+              <form class="was-validated" id="submitForm" novalidate>
+                <div class="form-group">
+                  <label for="exampleInputName">Your Name *</label>
+                  <input type="text" class="form-control" id="exampleInputName" aria-describedby="Name" placeholder="Please Enter your name" name="Name" required>
+                  <div class="valid-feedback">
+                    Looks Good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please fill this field correctly!
+                  </div>
+                  </div>
+                  <div class="form-group">
+                  <label for="exampleInputEmail1">Email address *</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+                  <div class="valid-feedback">
+                    Looks Good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please fill this field correctly! eg: something@something.com
+                  </div>
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label>Company name *</label>
+                  <input class="form-control" type="text" placeholder="Company name goes here" name="companyName" required></input>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please fill this field correctly!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Company phone number *</label>
+                  <input class="form-control" type="number" placeholder="Phone number goes here" name="companyNumber" max="9999999999" min="1000000000" required></input>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please fill this field correctly.  Only 10 digits are allowed!
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">What part of Bitecope interested you? *</label>
+                  <textarea class="form-control" rows="5" placeholder="Type here" name="message" required></textarea>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please feel free to let us know your thoughts!
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+              </form>
+              <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+              <br>
+              <p class="text">Connect with us on the following socials:</p>
+              <div class="socials">
+                <a class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/company/bitecope"><i class="fa fa-linkedin"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="https://mobile.twitter.com/bitecope"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-medium" href="https://medium.com/@bitecope"><i class="fa fa-medium "></i></a>
+              </div>
+                
+            </div>
+          </div>  
+          
+          <!-- fourth row ends -->
+
+          <!-- fifth row starts -->
+          <!-- <div class="row bg-deep" id="Developers">
+            <div class="col-sm-12 ml-auto">
+              <p class="wow bounceInUp title-text">Our Team</p> -->
+              <!-- card container area starts -->
+              <!-- <div class="dev-corner"></div> -->
+              <!-- card container area ends -->
+            <!-- </div> -->
+            <!-- fifth row ends -->
+          
+          <!-- sixth row starts -->
+               <div class="row justify-content-center bg-footer">             
+                    <div class="col-auto">
+                        <br>
+                        <p>© Copyright 2021 Bitecope</p>
+                    </div>
+               </div>
+            </div>
+        </footer>    
+        <!-- sixth row ends -->
+        </div> 
+          <!-- main container ends -->
+          
+  
+     
+        <!-- <script  type="text/javascript" src="js/developers.js"></script> -->
+        <!-- <script type="text/javascript" src="js/index.js"></script> -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script> new WOW().init();</script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() { 
+              // jQuery('.loader').fadeOut("slow");  
+              // document.getElementById('submitForm').addEventListener('submit', async function(e){
+              //   e.preventDefault();
+            
+              //   // fetch api
+
+                
+                
+              // });
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('was-validated');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                // event.stopPropagation();
+                form.addEventListener('submit',async function(event) {
+                  event.preventDefault();
+                  if (form.checkValidity() === false) {
+                   
+                    swal({
+                      title: "Please fill all the fields",
+                      icon: "warning" 
+                    })
+                  }
+                  else{
+                    
+                 swal({
+                  title: "Details submitted successfully!",
+                  text: "We will get back to you soon",
+                  icon: "success",
+                 }) 
+                 .then((ok) => {
+                  if(ok){
+                    // window.location.href="/";
+                    document.forms[0].reset();
+                  }
+                 });
+                    const response = await fetch('/email', {
+                  method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                  body: new URLSearchParams(new FormData(event.target)),
+                  headers: {
+                   'Content-Type': 'application/x-www-form-urlencoded',
+
+                  }
+                });                
+                  }
+                  form.classList.add('needs-validation');
+                }, false);
+              });
+            }, false);
+          })();
+          
+          $(window).on('load', function () {  
+            $(".loader").fadeOut("slow");  
+          });
+          
+          </script>
+      </body>
+<html>
