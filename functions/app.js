@@ -1,34 +1,34 @@
-const express = require('express');
+// const express = require('express');
 const nodemailer = require('nodemailer');
-const path = require('path');
-var config = require('./secrets');
+const queryString = require('querystring');
+// const path = require('path');
+// // var config = require('./secrets');
 
-const app = express();
-app.set('view engine','ejs'); 
-app.use(express.static(path.join(__dirname, 'public')));
+// const app = express();
+// app.set('view engine','ejs'); 
+// app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+// app.use(express.json());
+// app.use(express.urlencoded({extended: true}));
 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+// app.get('/', (req, res) => {
+//     res.render('index');
+// });
 
-app.post('/email', (req,res) => {
-    console.log(req.body);
-    const {Name,email,companyName,companyNumber,message} = req.body;
-    main(Name,email,companyName,companyNumber,message);
-    ack(Name,email,companyName,companyNumber,message);
-    // res.redirect('/');
-    return res.json({});
-    // console.log(res.status);
-} )
-app.listen(3000, () => console.log('Server started...'));
+// app.post('/email', (req,res) => {
+//     console.log(req.body);
+//     const {Name,email,companyName,companyNumber,message} = req.body;
+//     main(Name,email,companyName,companyNumber,message);
+//     ack(Name,email,companyName,companyNumber,message);
+//     // res.redirect('/');
+//     return res.json({});
+//     // console.log(res.status);
+// } )
+// app.listen(3000, () => console.log('Server started...'));
 
 
 // Nodemailer
 "use strict";
-
 async function main(Name,email,companyName,companyNumber,message) {
   let testAccount = await nodemailer.createTestAccount();
 
@@ -37,8 +37,8 @@ async function main(Name,email,companyName,companyNumber,message) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: config.user, // generated ethereal user
-      pass: config.pass, // generated ethereal password
+      user: process.env.USER, // generated ethereal user
+      pass: process.env.PASS, // generated ethereal password
     },
   })
 
@@ -275,14 +275,14 @@ async function main(Name,email,companyName,companyNumber,message) {
 // acknowledgement to client
 async function ack(Name,email,companyName,companyNumber,message) {
   let testAccount = await nodemailer.createTestAccount();
-
+  console.log(process.env.USER);
   let transporter = nodemailer.createTransport({
     host: "smtp.office365.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: config.user, // generated ethereal user
-      pass: config.pass, // generated ethereal password
+      user: process.env.USER, // generated ethereal user
+      pass: process.env.PASS, // generated ethereal password
     },
   })
 
@@ -520,3 +520,13 @@ async function ack(Name,email,companyName,companyNumber,message) {
 }
 main().catch(console.error);
 ack().catch(console.error);
+exports.handler = async function(event){
+  console.log(event.body);
+  const {Name,email,companyName,companyNumber,message} = queryString.parse(event.body);
+  main(Name,email,companyName,companyNumber,message);
+  ack(Name,email,companyName,companyNumber,message);
+  
+  return {statusCode:200}
+ 
+};
+
