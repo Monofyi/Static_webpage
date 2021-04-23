@@ -40,6 +40,9 @@ async function main(Name,email,companyName,companyNumber,message) {
       user: process.env.USER, // generated ethereal user
       pass: process.env.PASS, // generated ethereal password
     },
+    tls: {
+      ciphers:'SSLv3'
+      },
   })
 
   // send mail with defined transport object
@@ -283,6 +286,9 @@ async function ack(Name,email,companyName,companyNumber,message) {
     auth: {
       user: process.env.USER, // generated ethereal user
       pass: process.env.PASS, // generated ethereal password
+    },
+    tls: {
+      ciphers:'SSLv3'
     },
   })
 
